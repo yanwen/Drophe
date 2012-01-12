@@ -1,0 +1,19 @@
+PHP-SDK ChangeLog
+
+version - 1.0.0.3
+1. 修改注释
+
+version - 1.0.0.2
+1. 增加两个函数来处理含有中文和特殊字符的array转json的操作
+对put_object_policy  put_bucket_policy create_object_superfile三处用到json_encode的代码进行了替换，替换为array_to_json($array)
+增加的函数为：
+private static function array_recursive(&$array, $function, $apply_to_keys_also = false)
+private static function array_to_json($array)
+
+version - 1.0.0.1
+1. 去除create_dir和delete_dir接口，这两个接口不开放给用户
+2. 调整所有BS名称为BCS
+3. 调整php sdk代码的字符集为 UTF-8
+
+version - 1.0.0.0
+1. 调整对外开放版本 first tag

@@ -1,0 +1,14 @@
+---
+name: possibility
+version: 1
+
+handle:
+  - rewrite: if(!is_dir() && !is_file() && path ~ "^(.*)$") goto "index.php$1?%{QUERY_STRING}"
+  
+
+cron:
+    - description: cron baidu
+	  url: updateall.php
+	  schedule: every 10 mins
+	  timezone: Beijing
+...
