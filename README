@@ -1,0 +1,17 @@
+api程序是运行在sae上的
+
+Lib/FileBaidu.php
+为存储的相关api
+
+Lib/CMSBaidu.php
+为短信相关api
+
+
+另外
+一个Cron在config.yaml中
+    - description: cron baidu
+    url: updateall.php
+    schedule: every 10 mins
+	  timezone: Beijing
+
+每10分钟执行updateall.php来更新用户使用了多少资源。
